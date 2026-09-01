@@ -1,0 +1,17 @@
+environment_id: IPAT-DISS-ENV-v1
+python: "3.12"
+primary_runtime: python
+secondary_runtime: matlab
+interchange:
+  arrays: hdf5
+  metadata: json
+  configuration: yaml
+  tabular: parquet
+reproducibility:
+  capture_git_commit: true
+  capture_uv_lock_hash: true
+  capture_python_packages: true
+  capture_pytorch_cuda: true
+  capture_matlab_release_toolboxes: true
+  capture_os_hardware: true
+

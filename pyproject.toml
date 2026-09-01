@@ -1,0 +1,45 @@
+[project]
+name = "ipat-dissertation"
+version = "0.1.0"
+description = "Reproducible experiment environment for the IPAT MSc Data Science dissertation"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "pyarrow",
+    "h5py",
+    "pyyaml",
+    "pydantic",
+    "optuna",
+    "tqdm",
+    "torch==2.13.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "jupyterlab",
+    "ipykernel",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu130" }
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
