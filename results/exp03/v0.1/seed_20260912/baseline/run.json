@@ -1,0 +1,139 @@
+{
+  "artefact_sha256": {
+    "checkpoint.pt": "8885951ac7fe3c3f6bf640e1aa9f6c6a53885a91ff2001bd50cd28c40e784b3d",
+    "predictions.npz": "f4ca3d5ca463382dc27ac25281e276a55f54287ec4cff7b1022b9f1d4a749177"
+  },
+  "content_sha256": "3abb693bb80d53d649cf563b85b709aed24e30327dad2037379246f24b440f28",
+  "fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "metrics": {
+    "diagnostics_by_position": {
+      "early": {
+        "probe_attention_mass": 0.12633399665355682,
+        "signal_attention_mass": 0.3602559268474579,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "late": {
+        "probe_attention_mass": 0.11749399453401566,
+        "signal_attention_mass": 0.3565043807029724,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "middle": {
+        "probe_attention_mass": 0.12099406123161316,
+        "signal_attention_mass": 0.35747233033180237,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      }
+    },
+    "macro": {
+      "accuracy": 0.7096666666666667,
+      "auroc": 0.7913092418325758,
+      "brier": 0.18703743794880423,
+      "nll": 0.5525171732566774
+    },
+    "mean_logit_range": 0.12435761927813292,
+    "per_position": {
+      "early": {
+        "accuracy": 0.717,
+        "auroc": 0.7943993662377569,
+        "brier": 0.18586784581917026,
+        "nll": 0.5499719931224785
+      },
+      "late": {
+        "accuracy": 0.703,
+        "auroc": 0.7884738493054222,
+        "brier": 0.18827328089463707,
+        "nll": 0.5549708587795551
+      },
+      "middle": {
+        "accuracy": 0.709,
+        "auroc": 0.7910545099545483,
+        "brier": 0.18697118713260544,
+        "nll": 0.5526086678679987
+      }
+    },
+    "prediction_count": 3000,
+    "primary_probability_range": 0.0253717998619256,
+    "worst_position": {
+      "accuracy": 0.703,
+      "auroc": 0.7884738493054222,
+      "brier": 0.18827328089463707,
+      "nll": 0.5549708587795551
+    }
+  },
+  "model": "baseline",
+  "seed": 20260912,
+  "status": "RUN_COMPLETE",
+  "training": {
+    "best_epoch": 5,
+    "best_val_nll": 0.5647480163574219,
+    "epoch_order_sha256": [
+      "9d96b0bc3b5720b484cf60d2ce723b51701d27554cc54fefb21665ccb59e9b46",
+      "ba0b356a7a792ce4a14b97d81a82beba78bf9fa5df53c315fdb5bbb90b2a9543",
+      "5557c119fad3c84e588e0df28d49a4e0d1c2a2a1dddab907b59df88b75eecf42",
+      "de6588c74a26ce62c1177f1c857f51da969ed669b7c7b3d23f1004d1ef3963b7",
+      "94281a571420ce95a67d587866ff79d011b4e69476d6196c9228b043a0522939",
+      "11aebb4d927ab15cb2261a6bf4813ae8dbe224506832d8e54abcba8be6f414ba",
+      "f632c06e32b3692cdf20e0e0678e636e5028ecca7f2e1e5ce079a90704a87b9a",
+      "ef4b836ffef0deed27025a24cde538662aec20a612e1f147bf00958c38ea8a28",
+      "f3587cef05f1e53d9252d852a4632f91f01d20dad14d0363cd9cedff0f7e8b03",
+      "fd3df39e004bce0b60489763244f2612ff894a00cde99ec97c0fa65b175cf78f"
+    ],
+    "epochs_run": 10,
+    "selected_state_sha256": "5d76351bf0c80bc0d4c60cdaf6c8300c1d4e7d0a0e077abcb795b7190baff9fa",
+    "training_seconds": 165.23399999999674,
+    "trajectory": [
+      {
+        "epoch": 1,
+        "train_nll": 0.6598625392913818,
+        "val_nll": 0.5828389434814453
+      },
+      {
+        "epoch": 2,
+        "train_nll": 0.5626114699840545,
+        "val_nll": 0.5704203462600708
+      },
+      {
+        "epoch": 3,
+        "train_nll": 0.5457031798362731,
+        "val_nll": 0.5657687950134277
+      },
+      {
+        "epoch": 4,
+        "train_nll": 0.539150741815567,
+        "val_nll": 0.5761967365741729
+      },
+      {
+        "epoch": 5,
+        "train_nll": 0.5355903568267822,
+        "val_nll": 0.5647480163574219
+      },
+      {
+        "epoch": 6,
+        "train_nll": 0.5288799924850464,
+        "val_nll": 0.5775054178237915
+      },
+      {
+        "epoch": 7,
+        "train_nll": 0.5261224689483642,
+        "val_nll": 0.5754866795539856
+      },
+      {
+        "epoch": 8,
+        "train_nll": 0.5289358079433442,
+        "val_nll": 0.5696390271186829
+      },
+      {
+        "epoch": 9,
+        "train_nll": 0.5154270186424256,
+        "val_nll": 0.5748539395332336
+      },
+      {
+        "epoch": 10,
+        "train_nll": 0.5066739642620086,
+        "val_nll": 0.5869907002449035
+      }
+    ]
+  }
+}

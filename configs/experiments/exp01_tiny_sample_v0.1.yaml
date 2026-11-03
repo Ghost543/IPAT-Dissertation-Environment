@@ -1,0 +1,39 @@
+experiment_id: EXP-01
+experiment_name: matched tiny-sample overfit sanity test
+
+# One deterministic sanity run is sufficient here because this is an implementation gate,
+# not a statistical model-comparison experiment.
+protocol:
+  subset_size: 32
+  subset_seed: 20260903
+  model_seed: 20260903
+  steps: 300
+  learning_rate: 0.003
+  weight_decay: 0.01
+  dropout_override: 0.0
+  gamma: 1.0
+  target_loss: 0.05
+  target_accuracy: 1.0
+  log_every: 25
+  deterministic_algorithms: true
+  initial_parity_atol: 1.0e-6
+  require_canonical_train_split: true
+
+matching_contract:
+  same_train_split: true
+  same_subset_indices: true
+  same_batch_order: true
+  same_train_only_preprocessing: true
+  exact_shared_initial_state: true
+  same_optimizer: AdamW
+  same_learning_rate: true
+  same_weight_decay: true
+  same_max_steps: true
+  same_stopping_rule: true
+  same_dropout_override: true
+  retention_only_difference: retention_scorer_plus_attention_logit_bias
+
+interpretation:
+  primary_gate: both models reach target_loss and target_accuracy within max steps
+  step_to_target: descriptive_only
+  warning: do not interpret this tiny-sample experiment as generalisation or superiority evidence

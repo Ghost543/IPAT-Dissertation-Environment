@@ -1,0 +1,130 @@
+{
+  "status": "PASS",
+  "scope": "Train-only resource diagnostic; disposable seed/weights; not EXP-05 results",
+  "configuration": {
+    "version": "EXP05-pilot-v0.1",
+    "accepted_date": "2026-09-13",
+    "source_sha256": "183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249",
+    "protocol_sha256": "8fb8fb2531c51f640fffc028e25875451113c3700e52b02f84fa832858b72140",
+    "preprocessing_logical_sha256": "099e912b13a895440aec1587d21ad2f1e722b8360444292025fa2cb2bf6c58d5",
+    "logical_hashes": {
+      "train": "c62c829b131e40e47f6dbbe39dfe9a65e43adfef49e47dab766b05171b66931f",
+      "validation": "93cf0a2649ae0bef73eb21b7d8932a3c25271cc2fa39cf7309cb639416bd2f73",
+      "calibration": "f6c4285b2b5e6f7f8f1bc002c290d0c5684c4f3a315bbb906b8be835c4056385",
+      "test": "a5d399808c4c1b218072a9ec87ec7ab81fd6eaad837a5330ed4eec685e1b96f1"
+    },
+    "seeds": [
+      1001,
+      1002,
+      1003
+    ],
+    "epochs": 20,
+    "batch_size": 64,
+    "microbatch": 64,
+    "learning_rate": 0.001,
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "checkpoint_every": 50,
+    "bootstrap_draws": 2000,
+    "model": {
+      "n_layers": 2,
+      "n_heads": 4,
+      "ff_multiplier": 4,
+      "dropout": 0.1,
+      "identity_floor": 0.25,
+      "asinh_scales": [
+        0.25,
+        1.0,
+        4.0
+      ],
+      "gamma": 1.0,
+      "numeric_embedding_dim": 2,
+      "categorical_embedding_dim": 4
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "sklearn": "1.9.0",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "cpu_threads": 10,
+    "code_sha256": {
+      "ipat.model.baseline": "9db4972e9a666142becdddaa24e66124111965cd48d9109f5e18bc06f588d62b",
+      "ipat.model.adaptive": "0bc049903c586b92139dfff3b2618ce8f4072e69f164d1dc239e19bbb72675f5",
+      "ipat.model.retention": "b46fd347f43b634bddd3f9dec8342b1e680fd4f518f95cd566af1e04ff77cbb9",
+      "ipat.model.bpi17": "66ef35e794b928d07828bf8ad7eea3aceaa113eb614883b599485143487911f7",
+      "ipat.data.bpi17": "6f3b6b32ec2d368d46ae0c665a6fb1af1927bebaf2ff50ca48a3e6dc289378b8",
+      "ipat.experiments.exp05": "90eedf501583b673177ad1f6d948b3fc3f122f3ee02a1a1a1ffd52a9a244a340",
+      "ipat.experiments.exp05_io": "110256e38839aa0a31998a90a2745514d4fdd23002b9ff00790899f1e01844e1",
+      "ipat.experiments.exp05_metrics": "56206b5869d8678fff2759780faccd596d3189ee0cd554b829ace93900c4d04a",
+      "ipat.experiments.exp05_references": "6dbf8eda6bc95421a8320beae2f9e9e9d3ea04a8226af1eaff019987e0dff705",
+      "ipat.experiments.exp05_plots": "3256779d33a11172addafd5217ef2ef7f56e4b1d0654280c3324f8a3d6eefa4c"
+    }
+  },
+  "longest_training_prefix": 139,
+  "runs": [
+    {
+      "arm": "T00",
+      "updates": 50,
+      "elapsed_seconds": 2.821682100009639,
+      "peak_process_rss_bytes": 1224060928,
+      "rss_sampling_seconds": 0.05,
+      "peak_cuda_allocated_bytes": 248380416
+    },
+    {
+      "arm": "T10",
+      "updates": 50,
+      "elapsed_seconds": 1.8647902999655344,
+      "peak_process_rss_bytes": 1280516096,
+      "rss_sampling_seconds": 0.05,
+      "peak_cuda_allocated_bytes": 258304000
+    },
+    {
+      "arm": "T01",
+      "updates": 50,
+      "elapsed_seconds": 2.127630800008774,
+      "peak_process_rss_bytes": 1307410432,
+      "rss_sampling_seconds": 0.05,
+      "peak_cuda_allocated_bytes": 275388928
+    },
+    {
+      "arm": "T11",
+      "updates": 50,
+      "elapsed_seconds": 1.4164850999950431,
+      "peak_process_rss_bytes": 1307697152,
+      "rss_sampling_seconds": 0.05,
+      "peak_cuda_allocated_bytes": 278381568
+    },
+    {
+      "arm": "GRU",
+      "updates": 50,
+      "elapsed_seconds": 1.3083096999907866,
+      "peak_process_rss_bytes": 1392087040,
+      "rss_sampling_seconds": 0.05,
+      "peak_cuda_allocated_bytes": 87878656
+    }
+  ],
+  "shared_initialisation": {
+    "1001": {
+      "T00": "4441cf2f4e016486171861cf36a90d849496dec34dc13b9d5fe9c24a02a3a379",
+      "T10": "4441cf2f4e016486171861cf36a90d849496dec34dc13b9d5fe9c24a02a3a379",
+      "T01": "4441cf2f4e016486171861cf36a90d849496dec34dc13b9d5fe9c24a02a3a379",
+      "T11": "4441cf2f4e016486171861cf36a90d849496dec34dc13b9d5fe9c24a02a3a379"
+    },
+    "1002": {
+      "T00": "86e3913a81e44ea1feb75c38f1ca138f35b2fb51754f316cb2b45a8731cd2873",
+      "T10": "86e3913a81e44ea1feb75c38f1ca138f35b2fb51754f316cb2b45a8731cd2873",
+      "T01": "86e3913a81e44ea1feb75c38f1ca138f35b2fb51754f316cb2b45a8731cd2873",
+      "T11": "86e3913a81e44ea1feb75c38f1ca138f35b2fb51754f316cb2b45a8731cd2873"
+    },
+    "1003": {
+      "T00": "24676782aa2dce5833e3e43066bcad988b3016f10da1b873fcf69e586adcaeb4",
+      "T10": "24676782aa2dce5833e3e43066bcad988b3016f10da1b873fcf69e586adcaeb4",
+      "T01": "24676782aa2dce5833e3e43066bcad988b3016f10da1b873fcf69e586adcaeb4",
+      "T11": "24676782aa2dce5833e3e43066bcad988b3016f10da1b873fcf69e586adcaeb4"
+    }
+  }
+}

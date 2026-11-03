@@ -1,0 +1,18 @@
+experiment_id: EXP-04
+version: v0.1
+approved: 2026-09-09
+primary_endpoint: raw_nll_oriented_macro_change
+protocol:
+  # Engineering defaults. Record before execution; changing them blocks resume.
+  batch_size: 64
+  cpu_threads: 1
+  temperature_min: 0.01
+  temperature_max: 100.0
+  temperature_xatol: 1.0e-8
+  temperature_nll_atol: 1.0e-10
+  replay_atol: 0.0
+  ece_bins: 15
+# Mathematical/design constants live in exp04_contract.py and are validated.
+# Three frozen models x ten parent seeds; clean + nine existing corruptions.
+# No model training, no per-corruption temperature fitting, no primary RRR.
+# Equal family weights, then equal severity weights within each family.

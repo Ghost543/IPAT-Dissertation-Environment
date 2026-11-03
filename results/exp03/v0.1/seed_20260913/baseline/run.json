@@ -1,0 +1,133 @@
+{
+  "artefact_sha256": {
+    "checkpoint.pt": "018cf326b41291eb793fb1ad3c2dc06fb97c2bbe613235b017a885f2f5b23072",
+    "predictions.npz": "0c568c59c52c590758690656d8ae207cfea693f1b46c79537c463629910701aa"
+  },
+  "content_sha256": "123c9f912aa40a3aed6a5d0df157b1febebf5e23a3d60b188a466d2594702fb0",
+  "fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "metrics": {
+    "diagnostics_by_position": {
+      "early": {
+        "probe_attention_mass": 0.091420978307724,
+        "signal_attention_mass": 0.2607570290565491,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "late": {
+        "probe_attention_mass": 0.0859447568655014,
+        "signal_attention_mass": 0.2541715204715729,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "middle": {
+        "probe_attention_mass": 0.08384785056114197,
+        "signal_attention_mass": 0.25430405139923096,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      }
+    },
+    "macro": {
+      "accuracy": 0.7173333333333334,
+      "auroc": 0.793152380342701,
+      "brier": 0.1862389321834714,
+      "nll": 0.5503077817024574
+    },
+    "mean_logit_range": 0.08038674268126487,
+    "per_position": {
+      "early": {
+        "accuracy": 0.716,
+        "auroc": 0.792942993406312,
+        "brier": 0.18627976067511032,
+        "nll": 0.5504859603937959
+      },
+      "late": {
+        "accuracy": 0.721,
+        "auroc": 0.7937792074771141,
+        "brier": 0.1859805178783997,
+        "nll": 0.5497074536765704
+      },
+      "middle": {
+        "accuracy": 0.715,
+        "auroc": 0.792734940144677,
+        "brier": 0.18645651799690416,
+        "nll": 0.550729931037006
+      }
+    },
+    "prediction_count": 3000,
+    "primary_probability_range": 0.01577715437264322,
+    "worst_position": {
+      "accuracy": 0.715,
+      "auroc": 0.792734940144677,
+      "brier": 0.18645651799690416,
+      "nll": 0.550729931037006
+    }
+  },
+  "model": "baseline",
+  "seed": 20260913,
+  "status": "RUN_COMPLETE",
+  "training": {
+    "best_epoch": 4,
+    "best_val_nll": 0.5543543291091919,
+    "epoch_order_sha256": [
+      "534c661822918122f10327c67ba0565cc1143832da07d7e4a597ec5c81a04100",
+      "f2c3ada104e470af62331ed4910e9f5c1639a3b9a3e77d25979256604a971ebb",
+      "e702a6eab75589aadd472df3907889267883c037809dd132c492d476c18d04ee",
+      "f92f68e58fb38d4f079942c6eeff48d5bbc640c5a988f6b1adf608d82268aa5a",
+      "c36def82a854083ac145658b66febeec4070d6c80e1c3f111fde49471054e768",
+      "4cd7d11984f72965eebeb1f67811707afcf4854830cf781938ebb31db97d3ea5",
+      "12156d33555566786f2b64d3dce16b7f7dae0b8dfbcd9cf887db6fa254621305",
+      "39f854b2a5928537cec5662c53ad65070a2e480a60fd53b597f1502fee4126ed",
+      "29fa5ea121eae2ef7f53719aed380ac7b128d5ba30c9321033087a7aa75073ce"
+    ],
+    "epochs_run": 9,
+    "selected_state_sha256": "66fcefb3febab4dd1e89d2855a1e1bbbbec3a3b5c0e0f100750a8b6f9e491ca6",
+    "training_seconds": 154.0460000000021,
+    "trajectory": [
+      {
+        "epoch": 1,
+        "train_nll": 0.6949777512550354,
+        "val_nll": 0.6775090999603272
+      },
+      {
+        "epoch": 2,
+        "train_nll": 0.5986889219284057,
+        "val_nll": 0.6226493091583252
+      },
+      {
+        "epoch": 3,
+        "train_nll": 0.5523901793956757,
+        "val_nll": 0.5609894580841065
+      },
+      {
+        "epoch": 4,
+        "train_nll": 0.5439124841690064,
+        "val_nll": 0.5543543291091919
+      },
+      {
+        "epoch": 5,
+        "train_nll": 0.538992894411087,
+        "val_nll": 0.5599410672187806
+      },
+      {
+        "epoch": 6,
+        "train_nll": 0.5425757162570953,
+        "val_nll": 0.5598476400375366
+      },
+      {
+        "epoch": 7,
+        "train_nll": 0.5356194155216217,
+        "val_nll": 0.5598421449661255
+      },
+      {
+        "epoch": 8,
+        "train_nll": 0.5338140685558319,
+        "val_nll": 0.5642713675498963
+      },
+      {
+        "epoch": 9,
+        "train_nll": 0.5328495728969574,
+        "val_nll": 0.5764227046966552
+      }
+    ]
+  }
+}

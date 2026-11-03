@@ -1,0 +1,114 @@
+{
+  "development": false,
+  "environment": {
+    "cpu_threads": 1,
+    "cublas_workspace_config": ":4096:8",
+    "cuda": "13.0",
+    "cudnn": 92000,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "device_name": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "machine": "AMD64",
+    "packages": {
+      "h5py": "3.16.0",
+      "numpy": "2.4.6",
+      "pyyaml": "6.0.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1",
+      "torch": "2.13.0+cu130"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "python": "3.12.14",
+    "torch_build": "PyTorch built with:\n  - C++ Version: 202002\n  - MSVC 194234444\n  - Intel(R) oneAPI Math Kernel Library Version 2026.1-Product Build 20260612 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.12.0 (Git Hash 80afa71049cd69a3df32adcccb623b12cd7baa22)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX2\n  - CUDA Runtime 13.0\n  - NVCC architecture flags: -gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120\n  - CuDNN 92.0  (built against CUDA 13.2)\n  - Magma 2.5.4\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=cf30153c4c131c8164ee7798e5022d810682e2cb, CUDA_FLAGS=-D_WINDOWS -Xcompiler=\" /EHsc\" -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xcompiler /Zc:__cplusplus -Xcompiler /Zc:preprocessor -Xcompiler /w -w -Xcompiler /FS -Xfatbin -compress-all -DONNX_NAMESPACE=onnx_torch --use-local-env -gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_100,code=sm_100 -gencode arch=compute_120,code=sm_120 -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --Werror cross-execution-space-call --no-host-device-move-forward --expt-relaxed-constexpr --expt-extended-lambda -Xfatbin -compress-all -Xcompiler=/wd4819,/wd4503,/wd4190,/wd4244,/wd4251,/wd4275,/wd4522 -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__, CUDA_VERSION=13.0, CUDNN_VERSION=9.20.0, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/.ci/pytorch/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DNDEBUG -DUSE_KINETO -DHAS_CUPTI -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.13.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+  },
+  "experiment": "EXP-03",
+  "fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "inputs_sha256": {
+    "sweep": "3b992ba374eb0a242cbcebf6265e4e2bf96296393220906d013beb8cb9dca547",
+    "train": "b7e90d05adc7093be0a9464e9c6e9d49a75c61bbb7c3482505b120ac4c890aff",
+    "val": "7eb576549a31467f639e724ea057d1d4e42870813a602d78c70d1e83d1e8ff7d"
+  },
+  "model": {
+    "dropout": 0.1,
+    "event_type_cardinality": 4,
+    "event_type_embedding_dim": 4,
+    "ff_multiplier": 4,
+    "n_heads": 4,
+    "n_layers": 2,
+    "n_num": 6,
+    "n_time_harmonics": 4,
+    "nuisance_cardinality": 8,
+    "nuisance_embedding_dim": 4,
+    "numeric_embedding_dim": 2
+  },
+  "preprocessing": {
+    "delta_mean": 1.062516526676278,
+    "delta_scale": 0.3835254678157762,
+    "numeric_mean": [
+      0.0011655613416213632,
+      -0.00038024924920621793,
+      -0.007956065022409236,
+      7.704046745110721e-07,
+      -0.0005715413326009256,
+      -0.0006875766016954523
+    ],
+    "numeric_scale": [
+      1.2767497169790816,
+      1.1543718786694797,
+      4.816549736740279,
+      1.0003657109200017,
+      0.9979605401031619,
+      0.6318437671706247
+    ],
+    "timestamp_mean": 25.689009866742133,
+    "timestamp_scale": 16.227788481378536
+  },
+  "protocol": {
+    "asinh_scales": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "batch_size": 64,
+    "cpu_threads": 1,
+    "epochs": 30,
+    "gamma": 1.0,
+    "identity_floor": 0.25,
+    "learning_rate": 0.001,
+    "min_delta": 0.0,
+    "patience": 5,
+    "replay_atol": 0.0,
+    "seeds": [
+      20260908,
+      20260909,
+      20260910,
+      20260911,
+      20260912,
+      20260913,
+      20260914,
+      20260915,
+      20260916,
+      20260917
+    ],
+    "weight_decay": 0.01
+  },
+  "source_sha256": {
+    "scripts\\run_exp03.py": "82e9152e85104c236d1be6fdc9f9da13bc0f16b419c80e986dccb53cad41d7d2",
+    "src\\ipat\\__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+    "src\\ipat\\data\\__init__.py": "621451a9e2396f141b38a9b2cedcff76dffb1a56d1990850e5aa9eaec43454fd",
+    "src\\ipat\\data\\synthetic.py": "1947ba781d1b072f02654dd2b67e32587f27fc479fc49e1ae20cc8d62b48a594",
+    "src\\ipat\\data\\torch_dataset.py": "c538f1a7c1e38829b3594277eb27dcd11c21f8a25284b2fb07c67a116527d344",
+    "src\\ipat\\experiments\\__init__.py": "8bc3173c334d279aa5a246afa3d4611841992da6bb6a1716f338c9246312eb4f",
+    "src\\ipat\\experiments\\exp01.py": "a98c05c78b0a9ba355180ee5b54abe9009491c9a52c8149df8d9893d03d063a4",
+    "src\\ipat\\experiments\\exp03.py": "ca1a44298dfb4cde43e38f6bcd3cab490b4e38b99301962c0ccebadc71d0b873",
+    "src\\ipat\\experiments\\exp03_contract.py": "6ba19b3caaddfc75ac9c948a77ce5d6c44f7a4525ec7fbc02342de23fd292a57",
+    "src\\ipat\\model\\__init__.py": "6e9083277c1e6061f5db29301490ab93141dd7e85ba0d10968ace2016cc97bf9",
+    "src\\ipat\\model\\adaptive.py": "0bc049903c586b92139dfff3b2618ce8f4072e69f164d1dc239e19bbb72675f5",
+    "src\\ipat\\model\\baseline.py": "9db4972e9a666142becdddaa24e66124111965cd48d9109f5e18bc06f588d62b",
+    "src\\ipat\\model\\retention.py": "b46fd347f43b634bddd3f9dec8342b1e680fd4f518f95cd566af1e04ff77cbb9",
+    "src\\ipat\\training\\__init__.py": "eadb5b0b21a027c4b17095c4901d242d1d28e8a2db2e496a963930ca33a15ebd",
+    "src\\ipat\\training\\preprocessing.py": "3ac5134b65dbe991e0ca3692880392313b76f39ac624add80852189d873189d5"
+  },
+  "version": "v0.1"
+}

@@ -1,0 +1,157 @@
+{
+  "baseline": {
+    "final_accuracy": 1.0,
+    "final_loss": 0.04144687578082085,
+    "final_retention_contrast": null,
+    "first_loss": 0.7343477010726929,
+    "passed": true,
+    "reached_step": 26,
+    "trajectory": [
+      {
+        "accuracy": 0.53125,
+        "loss": 0.7343477010726929,
+        "step": 1
+      },
+      {
+        "accuracy": 0.9375,
+        "loss": 0.15606985986232758,
+        "step": 25
+      },
+      {
+        "accuracy": 1.0,
+        "loss": 0.04144687578082085,
+        "step": 26
+      }
+    ]
+  },
+  "config": {
+    "deterministic_algorithms": true,
+    "dropout_override": 0.0,
+    "experiment_id": "EXP-01",
+    "gamma": 1.0,
+    "initial_parity_atol": 1e-06,
+    "learning_rate": 0.003,
+    "log_every": 25,
+    "model_seed": 20260903,
+    "require_canonical_train_split": true,
+    "steps": 300,
+    "subset_seed": 20260903,
+    "subset_size": 32,
+    "target_accuracy": 1.0,
+    "target_loss": 0.05,
+    "weight_decay": 0.01
+  },
+  "cuda_runtime": "13.0",
+  "device": "cuda",
+  "experiment_id": "EXP-01",
+  "initial_zero_effect_parity": {
+    "atol": 1e-06,
+    "max_attention_abs_diff": 2.2351741790771484e-08,
+    "max_hidden_abs_diff": 4.76837158203125e-07,
+    "max_logit_abs_diff": 1.1920928955078125e-07,
+    "max_z_pre_norm_abs_diff": 0.0,
+    "max_zero_init_retention_contrast": 0.0,
+    "within_tolerance": true
+  },
+  "interpretation_scope": "Implementation/trainability sanity only; no claim of generalisation or model superiority.",
+  "matching": {
+    "baseline_parameter_count": 41241,
+    "baseline_state_sha256": "bc621cfe63d901fd3cb44c8b342b5716dde2991b5dfb16ec0048f3fc8bf2604f",
+    "max_initial_shared_state_abs_diff": 0.0,
+    "retention_extra_parameter_count": 41,
+    "retention_only_trainable_parameters": [
+      "retention_scorer.linear.bias",
+      "retention_scorer.linear.weight"
+    ],
+    "retention_parameter_count": 41282
+  },
+  "preprocessing": {
+    "delta_mean": 1.062516526676278,
+    "delta_scale": 0.3835254678157762,
+    "numeric_mean": [
+      0.0011655613416213632,
+      -0.00038024924920621793,
+      -0.007956065022409236,
+      7.704046745110721e-07,
+      -0.0005715413326009256,
+      -0.0006875766016954523
+    ],
+    "numeric_scale": [
+      1.2767497169790816,
+      1.1543718786694797,
+      4.816549736740279,
+      1.0003657109200017,
+      0.9979605401031619,
+      0.6318437671706247
+    ],
+    "timestamp_mean": 25.689009866742133,
+    "timestamp_scale": 16.227788481378536
+  },
+  "retention": {
+    "final_accuracy": 1.0,
+    "final_loss": 0.041346658021211624,
+    "final_retention_contrast": 0.31407493352890015,
+    "first_loss": 0.7343477010726929,
+    "passed": true,
+    "reached_step": 26,
+    "trajectory": [
+      {
+        "accuracy": 0.53125,
+        "loss": 0.7343477010726929,
+        "retention_contrast": 0.0,
+        "step": 1
+      },
+      {
+        "accuracy": 0.875,
+        "loss": 0.22869881987571716,
+        "retention_contrast": 0.30476003885269165,
+        "step": 25
+      },
+      {
+        "accuracy": 1.0,
+        "loss": 0.041346658021211624,
+        "retention_contrast": 0.31407493352890015,
+        "step": 26
+      }
+    ]
+  },
+  "status": "PASS",
+  "subset_indices": [
+    330,
+    597,
+    630,
+    1025,
+    1444,
+    1521,
+    1601,
+    2038,
+    2047,
+    2367,
+    2657,
+    2839,
+    3277,
+    3513,
+    3659,
+    3734,
+    4011,
+    4129,
+    4628,
+    4868,
+    5084,
+    5413,
+    5448,
+    5679,
+    5703,
+    5983,
+    6016,
+    6047,
+    6311,
+    6992,
+    7615,
+    7648
+  ],
+  "subset_positive_count": 15,
+  "subset_prevalence": 0.46875,
+  "subset_size": 32,
+  "torch_version": "2.13.0+cu130"
+}

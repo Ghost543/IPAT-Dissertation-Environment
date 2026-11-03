@@ -1,0 +1,39 @@
+experiment_id: EXP-03
+version: v0.1
+approved: 2026-09-08
+primary_endpoint: mean_within_triplet_probability_range
+protocol:
+  seeds: [20260908, 20260909, 20260910, 20260911, 20260912, 20260913, 20260914, 20260915, 20260916, 20260917]
+  # Engineering defaults, not mathematical constants. Freeze before formal execution.
+  epochs: 30
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.01
+  patience: 5
+  min_delta: 0.0
+  gamma: 1.0
+  identity_floor: 0.25
+  asinh_scales: [0.25, 1.0, 4.0]
+  cpu_threads: 1
+  replay_atol: 0.0
+model:
+  n_num: 6
+  event_type_cardinality: 4
+  nuisance_cardinality: 8
+  numeric_embedding_dim: 2
+  event_type_embedding_dim: 4
+  nuisance_embedding_dim: 4
+  n_time_harmonics: 4
+  n_heads: 4
+  n_layers: 2
+  ff_multiplier: 4
+  dropout: 0.10
+interpretation:
+  sweep_triplets: 1000
+  positions: [early, middle, late]
+  checkpoint_selection: validation_NLL_only
+  training_objective: task_BCE_only
+  predictive_quality_required_for_interpretation: true
+  additional_replay_runs: 3
+  no_hypothesis_success_gate: true
+  limitation: Canonical training temporal label weight 0.4; sweep weight 0.0. Not a pure in-distribution positional-encoding ablation.

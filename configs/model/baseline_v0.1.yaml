@@ -1,0 +1,25 @@
+model_id: IMP-01-standard-transformer-v0.1
+model:
+  n_num: 6
+  event_type_cardinality: 4
+  nuisance_cardinality: 8
+  numeric_embedding_dim: 2
+  event_type_embedding_dim: 4
+  nuisance_embedding_dim: 4
+  n_time_harmonics: 4
+  n_heads: 4
+  n_layers: 2
+  ff_multiplier: 4
+  dropout: 0.10
+
+# These are starting engineering defaults, not theoretical constants.
+# d_in and d_model are derived by code. With these values: d_in=39, d_model=40.
+smoke_overfit:
+  subset_size: 32
+  steps: 300
+  learning_rate: 0.003
+  weight_decay: 0.01
+  dropout_override: 0.0
+  target_loss: 0.05
+  target_accuracy: 1.0
+  seed: 20260901

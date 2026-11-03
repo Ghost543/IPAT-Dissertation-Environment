@@ -1,0 +1,243 @@
+{
+  "data_gates": {
+    "cal": {
+      "exact_generator_reproduction": true,
+      "rows": 2000
+    },
+    "conditions": {
+      "clean": {
+        "class_prevalence": 0.5015,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04951430955881936,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "delete_10": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "fraction": 0.1,
+          "mean_deleted_events": 4.3955,
+          "seed": 10210,
+          "type": "event_deletion"
+        },
+        "deleted_events": 17582,
+        "length_max": 58,
+        "length_mean": 39.63975,
+        "length_min": 22,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.049529407560172135,
+        "sequences_without_signal": 3,
+        "signal_events_per_sequence": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "delete_25": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "fraction": 0.25,
+          "mean_deleted_events": 11.0115,
+          "seed": 10225,
+          "type": "event_deletion"
+        },
+        "deleted_events": 44046,
+        "length_max": 48,
+        "length_mean": 33.02375,
+        "length_min": 18,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04946440062076536,
+        "sequences_without_signal": 56,
+        "signal_events_per_sequence": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "missing_10": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "achieved_rate": 0.09925760233752126,
+          "p_add": 0.052631578947368425,
+          "seed": 10110,
+          "target_rate": 0.1,
+          "type": "missingness"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.09925760233752126,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "missing_20": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "achieved_rate": 0.19931569973297908,
+          "p_add": 0.15789473684210528,
+          "seed": 10120,
+          "target_rate": 0.2,
+          "type": "missingness"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.19931569973297908,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "missing_40": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "achieved_rate": 0.3988651137441027,
+          "p_add": 0.368421052631579,
+          "seed": 10140,
+          "target_rate": 0.4,
+          "type": "missingness"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.3988651137441027,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "noise_10": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "q": 0.1,
+          "seed": 10310,
+          "train_scale": [
+            1.2767497169790816,
+            1.1543718786694797,
+            4.816549736740279,
+            1.0003657109200017,
+            0.9979605401031619,
+            0.6318437671706247
+          ],
+          "type": "numerical_noise"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04951430955881936,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "noise_25": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "q": 0.25,
+          "seed": 10325,
+          "train_scale": [
+            1.2767497169790816,
+            1.1543718786694797,
+            4.816549736740279,
+            1.0003657109200017,
+            0.9979605401031619,
+            0.6318437671706247
+          ],
+          "type": "numerical_noise"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04951430955881936,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "timejitter_10": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "q": 0.1,
+          "seed": 10410,
+          "type": "temporal_jitter"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04951430955881936,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      },
+      "timejitter_25": {
+        "class_prevalence": 0.5015,
+        "corruption": {
+          "q": 0.25,
+          "seed": 10425,
+          "type": "temporal_jitter"
+        },
+        "deleted_events": 0,
+        "length_max": 64,
+        "length_mean": 44.03525,
+        "length_min": 24,
+        "mean_p_true": 0.49508574614467055,
+        "n_sequences": 4000,
+        "realized_missing_rate": 0.04951430955881936,
+        "sequences_without_signal": 0,
+        "signal_events_per_sequence": [
+          3
+        ]
+      }
+    },
+    "corruption_verification": "Exact in-memory reproduction; existing files never rewritten",
+    "deletion_semantics": "Surviving source timestamp/delta fields preserved; positions compacted",
+    "no_exact_partition_overlap": true,
+    "status": "PASS",
+    "test": {
+      "exact_generator_reproduction": true,
+      "rows": 4000
+    },
+    "train": {
+      "exact_generator_reproduction": true,
+      "rows": 8000
+    },
+    "val": {
+      "exact_generator_reproduction": true,
+      "rows": 2000
+    }
+  },
+  "fingerprint": "21245d94e303f36278e77609358e1d9ce88ee5df91e72142ce483b0a3f335939",
+  "formal_runs_performed": false,
+  "scope": "Data and provenance verification only",
+  "status": "PREFLIGHT_PASS"
+}

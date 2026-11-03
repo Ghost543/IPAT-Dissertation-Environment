@@ -1,0 +1,47 @@
+{
+  "date_utc": "2026-09-11",
+  "scope": "Development validation; user local replication pending. This is a summary receipt, not a raw console transcript. No predictive experiment results.",
+  "adapter_tests": {
+    "runner": "python -m unittest discover -s deliverables/IPAT_BPI17_Adapter_v0.1/tests -v",
+    "passed": 20,
+    "elapsed_seconds": 5.735,
+    "test_names": [
+      "test_unique_training_events_and_static_stats",
+      "test_heldout_mutations_do_not_change_fitting",
+      "test_future_event_mutation_ignored",
+      "test_forbidden_fields_do_not_enter_features",
+      "test_target_mismatch_rejected",
+      "test_zero_missing_padding_are_distinct",
+      "test_missing_unknown_and_known_categories",
+      "test_no_double_standardisation",
+      "test_time_gap_and_position",
+      "test_constant_and_empty_numeric_channel",
+      "test_invalid_scale_and_nonfinite_source_rejected",
+      "test_prefix_and_metadata_roundtrip",
+      "test_deterministic_cache_and_reload",
+      "test_collate_does_not_modify_examples",
+      "test_dimensions_and_shared_initialisation",
+      "test_limiting_forward_attention_and_shared_gradients",
+      "test_padding_invariance",
+      "test_temporal_encoder_exact_convention",
+      "test_no_double_scaling_and_missing_expansion_zero",
+      "test_projection_and_finite_training_step"
+    ]
+  },
+  "frozen_regressions": {
+    "runner": "python -m pytest ipat_work/tests/test_baseline.py ipat_work/tests/test_retention_attention.py ipat_work/tests/test_adaptive_representation.py -q",
+    "passed": 37,
+    "elapsed_seconds": 1.51
+  },
+  "full_source_acceptance": {
+    "report": "adapter_acceptance.json",
+    "passed": 17
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "device": "cpu"
+  }
+}

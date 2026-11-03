@@ -577,13 +577,15 @@ wheels = [
 [[package]]
 name = "ipat-dissertation"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "h5py" },
+    { name = "joblib" },
     { name = "matplotlib" },
     { name = "numpy" },
     { name = "optuna" },
     { name = "pandas" },
+    { name = "psutil" },
     { name = "pyarrow" },
     { name = "pydantic" },
     { name = "pyyaml" },
@@ -605,14 +607,16 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "h5py" },
-    { name = "matplotlib" },
+    { name = "joblib", specifier = ">=1.3" },
+    { name = "matplotlib", specifier = ">=3.8" },
     { name = "numpy" },
     { name = "optuna" },
     { name = "pandas" },
+    { name = "psutil", specifier = ">=5.9" },
     { name = "pyarrow" },
     { name = "pydantic" },
     { name = "pyyaml" },
-    { name = "scikit-learn" },
+    { name = "scikit-learn", specifier = ">=1.6" },
     { name = "scipy" },
     { name = "torch", specifier = "==2.13.0", index = "https://download.pytorch.org/whl/cu130" },
     { name = "tqdm" },

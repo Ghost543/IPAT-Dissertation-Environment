@@ -1,0 +1,52 @@
+{
+  "version": "IPAT-BPI17-contract-v0.1",
+  "status": "SPECIFIED_FOR_ADAPTER_IMPLEMENTATION; NOT_A_PROCESSED_DATA_FREEZE",
+  "source_sha256": "183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249",
+  "expected_source_counts": {"applications": 31509, "events": 1202267, "offers": 42995},
+  "unit": "one offer-creation prefix; loss weighted equally per offer",
+  "target": {"event": "O_Create Offer", "field": "Accepted", "mapping": {"false": 0, "true": 1}, "meaning": "recorded attribute; not certified equivalent to later O_Accepted or final loan outcome"},
+  "prefix": {"inclusive": true, "order": "original source order; require strictly increasing timezone-aware timestamps", "truncation": "none", "max_length_policy": "derive from full source audit; never discard long prefixes silently"},
+  "split": {
+    "time_field": "offer creation timestamp in UTC",
+    "boundaries": ["2016-07-01T00:00:00+00:00", "2016-09-01T00:00:00+00:00", "2016-10-20T00:00:00+00:00"],
+    "names": ["train", "validation", "calibration", "test"],
+    "boundary_rule": "left closed, right open; equality enters the later interval",
+    "crossing_application_policy": "exclude ALL offers of any application whose offer creation timestamps occupy more than one interval; retain excluded manifest",
+    "stratification": "none",
+    "scope": "retrospective chronological holdout; target maturity and historical feature availability not certified",
+    "date_provenance": "July/September are new calendar engineering choices; 20 October follows EBES reference code. No model outcomes used. Not exact EBES reproduction."
+  },
+  "features": {
+    "numerical": ["RequestedAmount", "FirstWithdrawalAmount", "NumberOfTerms", "MonthlyCost", "CreditScore", "OfferedAmount"],
+    "categorical": ["Action", "org:resource", "concept:name", "EventOrigin", "lifecycle:transition", "LoanGoal", "ApplicationType"],
+    "trace_static": ["RequestedAmount", "LoanGoal", "ApplicationType"],
+    "forbidden_as_inputs": ["Accepted", "Selected", "EventID", "OfferID", "application_id", "offer_id"],
+    "availability": "trace_static broadcast within prefix as retrospective benchmark convention; all other values only at their own event, no backward fill",
+    "numeric_zero": "preserve as observed; CreditScore sentinel meaning unresolved",
+    "numeric_missing": "explicit missingness indicator; zero placeholder after train-only standardisation",
+    "categorical_special_ids": {"PAD": 0, "MISSING": 1, "UNK": 2, "first_observed_category": 3},
+    "categorical_vocabulary": "training-only observed categories, deterministic lexical order",
+    "numeric_statistics": "population mean/std over observed values on unique TRAIN source events, not repeated offer-prefix occurrences; static trace values counted once per training application",
+    "numeric_scale": "max(population_std, 1e-8); require at least one training observation; constant channels use scale 1.0; persist statistics and flags",
+    "time": "elapsed time and preceding-event gap in seconds from source timestamps, gap zero at first event; absolute timestamp not model input; normalised time/gap/position follow frozen existing temporal encoder with training-only fitted scales",
+    "padding": "dynamic right padding per batch; validity mask separate from missingness; preserve frozen attention masking"
+  },
+  "training_policy": {"class_weighting": "none", "resampling": "none", "loss": "unweighted offer-mean cross-entropy/NLL", "batching": "seeded offer shuffle, each admitted offer once per epoch, shared batch order across matched Transformer arms", "objective": "MATH-06 task loss only"},
+  "evaluation": {
+    "primary": "clean held-out offer-mean NLL",
+    "secondary": ["balanced accuracy", "macro F1", "per-class precision and recall", "confusion matrix", "AUROC", "average precision for each class", "Brier score", "top-label ECE", "runtime and peak memory"],
+    "class_threshold": 0.5,
+    "ece": "MATH-08: 15 equal-width bins primary, 15 equal-mass bins sensitivity",
+    "calibration": "fit temperature only on clean calibration partition after model freezing; freeze temperature for test and corruption evaluation",
+    "dummy": "constant probability estimated from TRAIN class prevalence; held-out NLL and class metrics; no held-out prior fitting",
+    "length_strata": [[1, 10], [11, 20], [21, 40], [41, null]],
+    "stratum_reporting": "counts by label, NLL, balanced accuracy and per-class recall; undefined metrics explicitly NA; do not demand superiority to pass validity gates",
+    "dependence": "offers from one application are correlated; any observation-sampling bootstrap resamples applications with all their offers, not independent offers",
+    "supplementary": "application-macro NLL; state distinction from primary offer-weighted estimand"
+  },
+  "acceptance": {
+    "preflight": ["source hash and counts match", "unique application and offer IDs", "Boolean targets", "strict timestamp order", "complete candidate/excluded accounting", "application-disjoint admitted splits", "each split nonempty and contains both labels", "all retained offers obey date interval", "no truncation"],
+    "adapter_pending": ["source-to-tensor prefix and target provenance", "no forbidden or future fields", "train-only vocabularies/statistics with held-out perturbation tests", "observed zero distinct from missing and padding", "six numerical/seven categorical dimensions", "temporal encoding matches frozen interface", "sufficient projection output dimension for semi-orthogonality", "padding invariance", "matched shared initialisation and identity/gamma-zero forward and shared-gradient parity", "deterministic cache and split hashes", "user-local replication"],
+    "source_review_pending": ["exact official repository version and full terms", "CreditScore zero semantics and historical field availability limitations documented"]
+  }
+}

@@ -1,0 +1,27 @@
+synthetic:
+  dataset_id: IPAT-SYN-v0.1
+  master_seed: 20260831
+  n_train: 8000
+  n_val: 2000
+  n_cal: 2000
+  n_test: 4000
+  t_min: 24
+  t_max: 64
+  n_signal: 3
+  n_num: 6
+  n_nuisance_categories: 8
+  p_missing_clean: 0.05
+  p_zero_x6: 0.60
+  gap_log_mean: 0.0
+  gap_log_sd: 0.35
+  temporal_signal_weight: 0.4
+  position_sweep_temporal_weight: 0.0
+
+corruptions:
+  missingness_target_rates: [0.10, 0.20, 0.40]
+  event_deletion_fractions: [0.10, 0.25]
+  numerical_noise_q: [0.10, 0.25]
+  temporal_jitter_q: [0.10, 0.25]
+
+pilot:
+  position_sweep_triplets: 1000

@@ -1,0 +1,118 @@
+{
+  "version": "EXP06-v0.1",
+  "status": "PROPOSED_PROTOCOL_NOT_RUNNABLE",
+  "date": "2026-09-20",
+  "scope": "Held-out clean test; frozen checkpoints and temperatures",
+  "arms": [
+    "T00",
+    "T10",
+    "T01",
+    "T11",
+    "GRU",
+    "GBDT"
+  ],
+  "seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "expected_test_offers": 8613,
+  "test_start_utc": "2016-10-20T00:00:00Z",
+  "model_training": false,
+  "temperature_fitting": false,
+  "checkpoint_selection": false,
+  "threshold_fitting": false,
+  "predictive_test_access": "Only in future verified evaluator after protocol and provenance gates",
+  "primary_metric": "raw_offer_mean_nll_nats",
+  "primary_contrast": "T11_minus_T00",
+  "seed_aggregation": "mean_of_per_seed_scores_not_prediction_ensemble",
+  "seed_sd_ddof": 1,
+  "calibration_variants": [
+    "raw",
+    "frozen_temperature"
+  ],
+  "secondary_nll_contrasts": [
+    "each_arm_minus_T00_raw",
+    "each_arm_minus_T00_scaled",
+    "each_arm_minus_train_dummy",
+    "scaled_minus_raw_within_arm",
+    "raw_factorial_interaction"
+  ],
+  "metrics": [
+    "nll",
+    "application_macro_nll",
+    "brier",
+    "ece",
+    "ece_equal_mass",
+    "accuracy",
+    "balanced_accuracy",
+    "macro_f1",
+    "class_precision_recall_f1",
+    "confusion_matrix",
+    "auroc",
+    "average_precision_by_class"
+  ],
+  "threshold": 0.5,
+  "tie_class": 1,
+  "ece_bins": 15,
+  "ece_primary": "top_label_equal_width_0_to_1",
+  "ece_sensitivity": "top_label_equal_mass_stable_sort_split_ties",
+  "length_strata": [
+    [
+      1,
+      10
+    ],
+    [
+      11,
+      20
+    ],
+    [
+      21,
+      40
+    ],
+    [
+      41,
+      null
+    ]
+  ],
+  "bootstrap": {
+    "draws": 2000,
+    "seed": 60601,
+    "generator": "PCG64",
+    "unit": "application_with_all_offers",
+    "pair_across": "all_arms_seeds_and_probability_variants",
+    "interval_metrics": [
+      "nll_contrasts",
+      "raw_nll_factorial_interaction"
+    ],
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "quantile_method": "linear",
+    "scope": "descriptive_conditional_on_fitted_predictors"
+  },
+  "dummy": {
+    "train_positive_offers": 13234,
+    "train_offers": 19071,
+    "refit": false,
+    "calibrate": false
+  },
+  "parent_replay_logit_atol": 1e-06,
+  "test_repeat_replay": "exact_same_environment",
+  "display_seed": 1001,
+  "plot_formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "offline_html": true,
+  "output_parent": "results",
+  "evidence_sha256": {
+    "exp05_acceptance.json": "04528ad289871df3a8f06f36947fb680866f9720a945570a937e6478950ae0e4",
+    "exp05_pilot_summary.json": "ae291bc6688d0c85a287a76a7c448c54c1f6f76ee1ac55aecaa0c1c63c49b2e3",
+    "cal01_acceptance.json": "dc3d0553f761d1f122020c1b6eedbf6d162f3abfa7ad3228d1be973fce9fd59c",
+    "cal01_summary.json": "e27c08f94dd9f1efbb29f47cee4ecee98a2f71e102559d7669fd7b1e637ac57c"
+  },
+  "protocol_sha256": "ea59ef205c0531c00c6739f10548485567e62f7865e10ac7865ef53c4bef486d"
+}

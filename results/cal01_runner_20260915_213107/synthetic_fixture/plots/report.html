@@ -1,0 +1,30 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>CAL-01 report</title>
+<style>body{font:16px system-ui;max-width:1200px;margin:32px auto;padding:0 24px}img{width:100%}table{border-collapse:collapse}td,th{padding:8px;border:1px solid #ccc}</style>
+<h1>CAL-01 temperature fitting</h1><p><strong>SYNTHETIC FIXTURE ONLY</strong></p>
+<p>Temperature changes confidence. Model weights and decisions at threshold 0.5 stay fixed. Fit-sample changes are not independent calibration benefits. ECE may worsen even when fitting NLL improves.</p>
+<table><tr><th>Arm / seed</th><th>T</th><th>Raw NLL</th><th>Fit NLL</th><th>Solver status</th></tr>
+<tr><td>T00/1001</td><td>1.686266</td><td>0.686565</td><td>0.681401</td><td>INTERIOR</td></tr>
+<tr><td>T10/1001</td><td>1.827085</td><td>0.689384</td><td>0.682741</td><td>INTERIOR</td></tr>
+<tr><td>T01/1001</td><td>1.686266</td><td>0.686565</td><td>0.681401</td><td>INTERIOR</td></tr>
+<tr><td>T11/1001</td><td>1.827085</td><td>0.689384</td><td>0.682741</td><td>INTERIOR</td></tr>
+<tr><td>GRU/1001</td><td>18.508829</td><td>0.733731</td><td>0.693011</td><td>INTERIOR</td></tr>
+<tr><td>GBDT/1001</td><td>1.000000</td><td>0.693147</td><td>0.693147</td><td>UNIDENTIFIABLE</td></tr>
+<tr><td>T00/1002</td><td>2.630147</td><td>0.700451</td><td>0.688197</td><td>INTERIOR</td></tr>
+<tr><td>T10/1002</td><td>2.442021</td><td>0.698384</td><td>0.687571</td><td>INTERIOR</td></tr>
+<tr><td>T01/1002</td><td>2.630147</td><td>0.700451</td><td>0.688197</td><td>INTERIOR</td></tr>
+<tr><td>T11/1002</td><td>2.442021</td><td>0.698384</td><td>0.687571</td><td>INTERIOR</td></tr>
+<tr><td>GRU/1002</td><td>4.098005</td><td>0.710186</td><td>0.691081</td><td>INTERIOR</td></tr>
+<tr><td>GBDT/1002</td><td>1.000000</td><td>0.693147</td><td>0.693147</td><td>UNIDENTIFIABLE</td></tr>
+<tr><td>T00/1003</td><td>20.000000</td><td>0.786152</td><td>0.693908</td><td>BOUNDARY</td></tr>
+<tr><td>T10/1003</td><td>20.000000</td><td>0.788189</td><td>0.693922</td><td>BOUNDARY</td></tr>
+<tr><td>T01/1003</td><td>20.000000</td><td>0.786152</td><td>0.693908</td><td>BOUNDARY</td></tr>
+<tr><td>T11/1003</td><td>20.000000</td><td>0.788189</td><td>0.693922</td><td>BOUNDARY</td></tr>
+<tr><td>GRU/1003</td><td>20.000000</td><td>0.714841</td><td>0.693155</td><td>BOUNDARY</td></tr>
+<tr><td>GBDT/1003</td><td>1.000000</td><td>0.693147</td><td>0.693147</td><td>UNIDENTIFIABLE</td></tr>
+</table>
+<h2>All seed temperatures; x marks a solution requiring review</h2><img src="temperatures.svg" alt="All seed temperatures; x marks a solution requiring review"><p><a href="temperatures.png">PNG</a> | <a href="temperatures.pdf">PDF</a></p>
+<h2>Paired changes on the same data used to fit T; optimistic fitting diagnostics</h2><img src="fit_metric_changes.svg" alt="Paired changes on the same data used to fit T; optimistic fitting diagnostics"><p><a href="fit_metric_changes.png">PNG</a> | <a href="fit_metric_changes.pdf">PDF</a></p>
+<h2>Before/after reliability; 15 fixed bins; display seed 1001</h2><img src="reliability.svg" alt="Before/after reliability; 15 fixed bins; display seed 1001"><p><a href="reliability.png">PNG</a> | <a href="reliability.pdf">PDF</a></p>
+<h2>Reliability bin counts; display seed 1001</h2><img src="bin_support.svg" alt="Reliability bin counts; display seed 1001"><p><a href="bin_support.png">PNG</a> | <a href="bin_support.pdf">PDF</a></p>
+<h2>Objective profiles; dots are fitted solutions; display seed 1001</h2><img src="temperature_objective.svg" alt="Objective profiles; dots are fitted solutions; display seed 1001"><p><a href="temperature_objective.png">PNG</a> | <a href="temperature_objective.pdf">PDF</a></p>
+</html>

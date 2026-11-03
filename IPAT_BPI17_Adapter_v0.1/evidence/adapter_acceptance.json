@@ -1,0 +1,215 @@
+{
+  "version": "IPAT-BPI17-adapter-v0.1",
+  "status": "PASS",
+  "scope": "Adapter and integration acceptance only; no EXP-05 predictive results.",
+  "source_sha256": "183c5e5189282779c811c78c33ff936351b3dd201165d612211fc220936f8249",
+  "manifest_sha256": "4934e54868e4674331b7df34afda09d57a3ee58646d39605ac3fa414cf51f044",
+  "contract_sha256": "72d7a993b68e01fbb49bcf13b25a99e23411ffd2db6caa9ba8ab21386a61cf9c",
+  "preprocessing_sha256": "4c527985a5c9f65d4d1bcebb91af8ded7d69942aaf415c24dbdd268ebdf9990d",
+  "runtime": {
+    "python": "3.12.14",
+    "torch": "2.14.0+cpu",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "device": "cpu"
+  },
+  "frozen_module_sha256": {
+    "ipat.model.baseline": "9db4972e9a666142becdddaa24e66124111965cd48d9109f5e18bc06f588d62b",
+    "ipat.model.adaptive": "0bc049903c586b92139dfff3b2618ce8f4072e69f164d1dc239e19bbb72675f5",
+    "ipat.model.retention": "fd788a8d376117ab1ee4e60598c314caff09b7e987d7e2a4b90ad9c68203a99b",
+    "ipat.training.preprocessing": "3ac5134b65dbe991e0ca3692880392313b76f39ac624add80852189d873189d5"
+  },
+  "adapter_module_sha256": {
+    "ipat.data.bpi17": "6f3b6b32ec2d368d46ae0c665a6fb1af1927bebaf2ff50ca48a3e6dc289378b8",
+    "ipat.model.bpi17": "66ef35e794b928d07828bf8ad7eea3aceaa113eb614883b599485143487911f7"
+  },
+  "builder_sha256": "3bacd8e2cf69c406a47fa5914118f928a6bb37f9b7bd8683a9bb6c50d6eccd0f",
+  "checks": {
+    "application_disjoint": true,
+    "offer_counts_match_contract": true,
+    "no_unknown_training_categories": true,
+    "all_training_scales_positive": true,
+    "all_cache_roundtrips": true,
+    "every_cached_offer_matches_manifest": true,
+    "shared_initialisation": true,
+    "limiting_forward_parity": true,
+    "limiting_attention_parity": true,
+    "limiting_gradient_parity": true,
+    "padding_invariance": true,
+    "projection_gram": true,
+    "projection_reconstruction": true,
+    "derivative_floor": true,
+    "no_double_standardisation": true,
+    "finite_backward_and_parameter_update": true,
+    "deterministic_encoding": true
+  },
+  "model_metrics": {
+    "shared_parameter_max_difference": 0.0,
+    "identity_gamma_zero_logit_max_difference": 0.0,
+    "identity_gamma_zero_attention_max_difference": 0.0,
+    "identity_gamma_zero_shared_gradient_max_difference": 0.0,
+    "padding_logit_max_difference": 2.9802322387695312e-08,
+    "projection_gram_max_error": 0.0,
+    "projection_reconstruction_max_error": 0.0,
+    "minimum_observed_derivative": 0.7449568510055542,
+    "standardisation_max_difference": 0.0
+  },
+  "validation_config": {
+    "n_num": 6,
+    "event_type_cardinality": 4,
+    "nuisance_cardinality": 8,
+    "numeric_embedding_dim": 2,
+    "event_type_embedding_dim": 4,
+    "nuisance_embedding_dim": 4,
+    "n_time_harmonics": 4,
+    "n_heads": 4,
+    "n_layers": 2,
+    "ff_multiplier": 4,
+    "dropout": 0.0,
+    "identity_floor": 0.25,
+    "asinh_scales": [
+      0.25,
+      1.0,
+      4.0
+    ],
+    "gamma": 1.0,
+    "categorical_cardinalities": [
+      8,
+      111,
+      22,
+      6,
+      10,
+      16,
+      5
+    ],
+    "categorical_embedding_dim": 4,
+    "d_in": 59,
+    "d_model": 60
+  },
+  "partitions": {
+    "train": {
+      "offers": 19071,
+      "events": 253781,
+      "applications": 13865,
+      "labels": {
+        "0": 5837,
+        "1": 13234
+      },
+      "logical_sha256": "c62c829b131e40e47f6dbbe39dfe9a65e43adfef49e47dab766b05171b66931f",
+      "file_sha256": "16c094610c491442e57159ea9226eeb2bc181b7ff2d956db61414d259e11ea0c",
+      "numeric_missing_fraction": [
+        0.0,
+        0.8957802199534244,
+        0.8957802199534244,
+        0.8957802199534244,
+        0.8957802199534244,
+        0.8957802199534244
+      ],
+      "categorical_unknown_fraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_length": 139
+    },
+    "validation": {
+      "offers": 7871,
+      "events": 94116,
+      "applications": 6006,
+      "labels": {
+        "0": 2237,
+        "1": 5634
+      },
+      "logical_sha256": "93cf0a2649ae0bef73eb21b7d8932a3c25271cc2fa39cf7309cb639416bd2f73",
+      "file_sha256": "f2864d97b0d78bf74feb271ba1741c8ad6aec904ee390cc515cebefec36cf860",
+      "numeric_missing_fraction": [
+        0.0,
+        0.8905074588805304,
+        0.8905074588805304,
+        0.8905074588805304,
+        0.8905074588805304,
+        0.8905074588805304
+      ],
+      "categorical_unknown_fraction": [
+        0.0,
+        0.05384844234774108,
+        0.0016575290067576182,
+        0.0,
+        0.0,
+        6.375111564452378e-05,
+        0.0
+      ],
+      "max_length": 93
+    },
+    "calibration": {
+      "offers": 6117,
+      "events": 72507,
+      "applications": 4770,
+      "labels": {
+        "0": 1715,
+        "1": 4402
+      },
+      "logical_sha256": "f6c4285b2b5e6f7f8f1bc002c290d0c5684c4f3a315bbb906b8be835c4056385",
+      "file_sha256": "9d5d60676ac297f31289c9928f29ef9f976c3d9fed2f06fe739673f36ce2fce7",
+      "numeric_missing_fraction": [
+        0.0,
+        0.8917897582302399,
+        0.8917897582302399,
+        0.8917897582302399,
+        0.8917897582302399,
+        0.8917897582302399
+      ],
+      "categorical_unknown_fraction": [
+        0.0,
+        0.1811411312011254,
+        0.0001103341746314149,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "max_length": 111
+    },
+    "test": {
+      "offers": 8613,
+      "events": 113442,
+      "applications": 6356,
+      "labels": {
+        "0": 2555,
+        "1": 6058
+      },
+      "logical_sha256": "a5d399808c4c1b218072a9ec87ec7ab81fd6eaad837a5330ed4eec685e1b96f1",
+      "file_sha256": "7c318a5cbf972e904f37bcb4275bc224c25a5416b8ebfca25e4d89e26de404b4",
+      "numeric_missing_fraction": [
+        0.0,
+        0.8974013152095344,
+        0.8974013152095344,
+        0.8974013152095344,
+        0.8974013152095344,
+        0.8974013152095344
+      ],
+      "categorical_unknown_fraction": [
+        0.0,
+        0.28006382115971157,
+        2.6445231924683978e-05,
+        0.0,
+        0.0,
+        8.815077308227993e-05,
+        0.0
+      ],
+      "max_length": 133
+    }
+  },
+  "training_unique_events": 187305,
+  "training_applications": 13865,
+  "limitations": [
+    "Local fixture-test output is separate evidence.",
+    "Passing integration checks does not verify historical field availability or source licensing/version.",
+    "One optimiser step is an engineering diagnostic, not EXP-05.",
+    "Projection and parity checks cover the recorded runtime/configuration."
+  ]
+}

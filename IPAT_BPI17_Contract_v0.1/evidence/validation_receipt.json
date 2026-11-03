@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "date": "2026-09-10",
+  "scope": "Development contract preflight; not tensor/model acceptance or user-local replication",
+  "python": "3.12.14",
+  "fixture_tests_passed": 10,
+  "preflight_checks": {
+    "source_hash_matches": true,
+    "source_counts_match": true,
+    "parser_ids_targets_timestamps_valid": true,
+    "candidate_accounting": true,
+    "application_disjoint": true,
+    "nonempty_splits": true,
+    "both_labels_in_each_split": true,
+    "retained_date_membership": true,
+    "positive_prefix_lengths": true
+  },
+  "additional_cross_checks": {
+    "candidate_histogram_matches_prior_independent_audit": true,
+    "candidate_labels_match_prior_independent_audit": true,
+    "source_totals_match_prior_independent_audit": true,
+    "manifest_unique_offers": true,
+    "all_excluded_apps_cross_provisional_partitions": true
+  },
+  "manifest_sha256": "4934e54868e4674331b7df34afda09d57a3ee58646d39605ac3fa414cf51f044",
+  "prior_audit_report_sha256": "62de813e8c657d6fb944a775cfaabaafccfa4efe41a60cfaf27736cfb83957c9",
+  "visual_check": "PNG inspected: labels and panels legible. HTML contains inline SVG; native browser layout not verified."
+}

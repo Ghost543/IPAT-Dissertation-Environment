@@ -1,0 +1,149 @@
+{
+  "artefact_sha256": {
+    "checkpoint.pt": "60e8cbff186ee395126bbe47a89e64da278cff7259b746842227104f89a252f5",
+    "predictions.npz": "82b4fd0dad0826c2c783fc69ef1266a4ee79fd49b8356ac02ce5075b9e24893c"
+  },
+  "content_sha256": "329e71bd49a9f97abf821a69894496969e00e4e5a18b4a6aa2621795db3106a3",
+  "fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "metrics": {
+    "diagnostics_by_position": {
+      "early": {
+        "log_retention_signal_margin": 0.47011229395866394,
+        "nuisance_retention_mean": 0.2540242373943329,
+        "probe_attention_mass": 0.11517427861690521,
+        "probe_retention": 0.4136273264884949,
+        "retention_signal_auroc": 0.9997390508651733,
+        "signal_attention_mass": 0.3100607693195343,
+        "signal_retention_mean": 0.4038263261318207,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "late": {
+        "log_retention_signal_margin": 0.4555750787258148,
+        "nuisance_retention_mean": 0.2543906569480896,
+        "probe_attention_mass": 0.09761697798967361,
+        "probe_retention": 0.3970898985862732,
+        "retention_signal_auroc": 0.99968421459198,
+        "signal_attention_mass": 0.29533588886260986,
+        "signal_retention_mean": 0.3985523581504822,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "middle": {
+        "log_retention_signal_margin": 0.4579768180847168,
+        "nuisance_retention_mean": 0.2543453276157379,
+        "probe_attention_mass": 0.09914597868919373,
+        "probe_retention": 0.4000355899333954,
+        "retention_signal_auroc": 0.9997053742408752,
+        "signal_attention_mass": 0.29760053753852844,
+        "signal_retention_mean": 0.3994503319263458,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      }
+    },
+    "macro": {
+      "accuracy": 0.7216666666666667,
+      "auroc": 0.7959384269039541,
+      "brier": 0.18509039398208793,
+      "nll": 0.5474833472213074
+    },
+    "mean_logit_range": 0.08780168141424656,
+    "per_position": {
+      "early": {
+        "accuracy": 0.714,
+        "auroc": 0.7955916714678957,
+        "brier": 0.18508018375677682,
+        "nll": 0.5475216821403328
+      },
+      "late": {
+        "accuracy": 0.728,
+        "auroc": 0.7965639203636132,
+        "brier": 0.1848631307363521,
+        "nll": 0.5469521885153017
+      },
+      "middle": {
+        "accuracy": 0.723,
+        "auroc": 0.7956596888803534,
+        "brier": 0.1853278674531349,
+        "nll": 0.5479761710082878
+      }
+    },
+    "prediction_count": 3000,
+    "primary_probability_range": 0.017240494830662867,
+    "probe_retention_range": 0.021724874153733253,
+    "worst_position": {
+      "accuracy": 0.714,
+      "auroc": 0.7955916714678957,
+      "brier": 0.1853278674531349,
+      "nll": 0.5479761710082878
+    }
+  },
+  "model": "full_ipat",
+  "seed": 20260913,
+  "status": "RUN_COMPLETE",
+  "training": {
+    "best_epoch": 4,
+    "best_val_nll": 0.5531211347579956,
+    "epoch_order_sha256": [
+      "534c661822918122f10327c67ba0565cc1143832da07d7e4a597ec5c81a04100",
+      "f2c3ada104e470af62331ed4910e9f5c1639a3b9a3e77d25979256604a971ebb",
+      "e702a6eab75589aadd472df3907889267883c037809dd132c492d476c18d04ee",
+      "f92f68e58fb38d4f079942c6eeff48d5bbc640c5a988f6b1adf608d82268aa5a",
+      "c36def82a854083ac145658b66febeec4070d6c80e1c3f111fde49471054e768",
+      "4cd7d11984f72965eebeb1f67811707afcf4854830cf781938ebb31db97d3ea5",
+      "12156d33555566786f2b64d3dce16b7f7dae0b8dfbcd9cf887db6fa254621305",
+      "39f854b2a5928537cec5662c53ad65070a2e480a60fd53b597f1502fee4126ed",
+      "29fa5ea121eae2ef7f53719aed380ac7b128d5ba30c9321033087a7aa75073ce"
+    ],
+    "epochs_run": 9,
+    "selected_state_sha256": "49648ec152d3d13b2302c0d0a95a2b4e37bf2b1d932fa2e8d6be7561c5a13d0f",
+    "training_seconds": 163.64100000000326,
+    "trajectory": [
+      {
+        "epoch": 1,
+        "train_nll": 0.6942771973609925,
+        "val_nll": 0.6714136590957641
+      },
+      {
+        "epoch": 2,
+        "train_nll": 0.5854202499389648,
+        "val_nll": 0.6155324683189393
+      },
+      {
+        "epoch": 3,
+        "train_nll": 0.5492946281433105,
+        "val_nll": 0.5593907098770141
+      },
+      {
+        "epoch": 4,
+        "train_nll": 0.5420790832042695,
+        "val_nll": 0.5531211347579956
+      },
+      {
+        "epoch": 5,
+        "train_nll": 0.5374378764629364,
+        "val_nll": 0.5586919736862183
+      },
+      {
+        "epoch": 6,
+        "train_nll": 0.5406573784351348,
+        "val_nll": 0.5584324126243592
+      },
+      {
+        "epoch": 7,
+        "train_nll": 0.5348405323028564,
+        "val_nll": 0.5587209639549255
+      },
+      {
+        "epoch": 8,
+        "train_nll": 0.5323891608715058,
+        "val_nll": 0.5648159246444702
+      },
+      {
+        "epoch": 9,
+        "train_nll": 0.5315589225292205,
+        "val_nll": 0.5778008093833923
+      }
+    ]
+  }
+}

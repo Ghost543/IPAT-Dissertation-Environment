@@ -1,0 +1,238 @@
+{
+  "accepted_date": "2026-09-09",
+  "calibration": "clean-calibration temperature fixed for all conditions; 15-bin top-label ECE",
+  "development": false,
+  "environment": {
+    "cpu_threads": 1,
+    "cublas_workspace_config": ":4096:8",
+    "cuda": "13.0",
+    "cudnn": 92000,
+    "deterministic_algorithms": true,
+    "device": "cpu",
+    "device_name": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "machine": "AMD64",
+    "packages": {
+      "h5py": "3.16.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.4.6",
+      "pyyaml": "6.0.3",
+      "scikit-learn": "1.9.0",
+      "scipy": "1.17.1",
+      "torch": "2.13.0+cu130"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 186 Stepping 2, GenuineIntel",
+    "python": "3.12.14",
+    "torch_build": "PyTorch built with:\n  - C++ Version: 202002\n  - MSVC 194234444\n  - Intel(R) oneAPI Math Kernel Library Version 2026.1-Product Build 20260612 for Intel(R) 64 architecture applications\n  - Intel(R) MKL-DNN v3.12.0 (Git Hash 80afa71049cd69a3df32adcccb623b12cd7baa22)\n  - OpenMP 2019\n  - LAPACK is enabled (usually provided by MKL)\n  - CPU capability usage: AVX2\n  - CUDA Runtime 13.0\n  - NVCC architecture flags: -gencode;arch=compute_75,code=sm_75;-gencode;arch=compute_80,code=sm_80;-gencode;arch=compute_86,code=sm_86;-gencode;arch=compute_90,code=sm_90;-gencode;arch=compute_100,code=sm_100;-gencode;arch=compute_120,code=sm_120\n  - CuDNN 92.0  (built against CUDA 13.2)\n  - Magma 2.5.4\n  - Build settings: BLAS_INFO=mkl, BUILD_TYPE=Release, COMMIT_SHA=cf30153c4c131c8164ee7798e5022d810682e2cb, CUDA_FLAGS=-D_WINDOWS -Xcompiler=\" /EHsc\" -DLIBCUDACXX_ENABLE_SIMPLIFIED_COMPLEX_OPERATIONS -Xcompiler /Zc:__cplusplus -Xcompiler /Zc:preprocessor -Xcompiler /w -w -Xcompiler /FS -Xfatbin -compress-all -DONNX_NAMESPACE=onnx_torch --use-local-env -gencode arch=compute_75,code=sm_75 -gencode arch=compute_80,code=sm_80 -gencode arch=compute_86,code=sm_86 -gencode arch=compute_90,code=sm_90 -gencode arch=compute_100,code=sm_100 -gencode arch=compute_120,code=sm_120 -Xcudafe --diag_suppress=cc_clobber_ignored,--diag_suppress=field_without_dll_interface,--diag_suppress=base_class_has_different_dll_interface,--diag_suppress=dll_interface_conflict_none_assumed,--diag_suppress=dll_interface_conflict_dllexport_assumed,--diag_suppress=bad_friend_decl --Werror cross-execution-space-call --no-host-device-move-forward --expt-relaxed-constexpr --expt-extended-lambda -Xfatbin -compress-all -Xcompiler=/wd4819,/wd4503,/wd4190,/wd4244,/wd4251,/wd4275,/wd4522 -Wno-deprecated-gpu-targets --expt-extended-lambda -DCUB_WRAPPED_NAMESPACE=at_cuda_detail -DDISABLE_CUSPARSE_DEPRECATED -DCUDA_HAS_FP16=1 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__, CUDA_VERSION=13.0, CUDNN_VERSION=9.20.0, CXX_COMPILER=C:/actions-runner/_work/pytorch/pytorch/.ci/pytorch/windows/tmp_bin/sccache-cl.exe, CXX_FLAGS=/DWIN32 /D_WINDOWS /EHsc /Zc:__cplusplus /bigobj /FS /utf-8 -DNDEBUG -DUSE_KINETO -DHAS_CUPTI -DSYMBOLICATE_MOBILE_DEBUG_HANDLE /wd4624 /wd4068 /wd4067 /wd4267 /wd4661 /wd4717 /wd4244 /wd4804 /wd4273, LAPACK_INFO=mkl, PERF_WITH_AVX=1, PERF_WITH_AVX2=1, TORCH_VERSION=2.13.0, USE_CUDA=ON, USE_CUDNN=ON, USE_CUSPARSELT=OFF, USE_GFLAGS=OFF, USE_GLOG=OFF, USE_GLOO=ON, USE_MKL=ON, USE_MKLDNN=ON, USE_MPI=OFF, USE_NCCL=OFF, USE_NNPACK=OFF, USE_OPENMP=ON, USE_ROCM=OFF, USE_ROCM_KERNEL_ASSERT=OFF, USE_XCCL=OFF, USE_XPU=OFF, \n"
+  },
+  "experiment": "EXP-04",
+  "fingerprint": "21245d94e303f36278e77609358e1d9ce88ee5df91e72142ce483b0a3f335939",
+  "inputs_sha256": {
+    "cal": "d8b4a8e7fd8c4701c4ec40c5147ba5eb26fb7b71cd91c5c199ae74ff6ee06006",
+    "clean": "40a939c5d84c3cbc8152f0fb3e28dd6e37eece8f64d1e43de9a4fa77199b82cf",
+    "delete_10": "228e8df3d11d4466a2ae312035120f586fb710e03fb7c861dd4eb669a2a22da8",
+    "delete_25": "6b2348f901abfc20e04c16c2f34adf9ae89ee5287bbf9ad5c124e93ddc7c6a64",
+    "missing_10": "9ae0789b1e5a9ffc05362548f01c7da027a2309e7c1ab6e6a67db8105f0534b5",
+    "missing_20": "829a88e393d2d4055a4bdc3fce8c5747405888b951c0d8ffb39eaf958f4c07bc",
+    "missing_40": "b42bde76c2ec0afc3b682724d909e6d83e6dcb8ec36a57c4cae56ef3cb431352",
+    "noise_10": "80059d550f138a6d989ec48483284cad3004fef6fc058b3976eebfe140bf480f",
+    "noise_25": "f94553914eb4ffa4fddecf71909290421587aba595aac17432773239dfca6598",
+    "timejitter_10": "79245dd1ae38cd3e0470ef609145b54261e69dbe8d3982735e0b6313d585c5ee",
+    "timejitter_25": "826d0746d68a79272e32d87068ac69d2e17ebdb535229fe98b454ab7e86c5e1d",
+    "train": "b7e90d05adc7093be0a9464e9c6e9d49a75c61bbb7c3482505b120ac4c890aff",
+    "val": "7eb576549a31467f639e724ea057d1d4e42870813a602d78c70d1e83d1e8ff7d"
+  },
+  "parent_artefacts": {
+    "manifest": "cc1b6ed0f106dbe2166042ce02ebc2126b8b27b7ef435b535c4f57933dea7576",
+    "runs": {
+      "seed_20260908/baseline": {
+        "checkpoint": "7c2ea7a43f0e397e1b0b0238eb4fc12a690cd17dca5f74235a18e0d0ddc39880",
+        "run_json": "f4325654ff2278e7d99f215f66119f4e677685dd12aa22136fe263a365de9eea"
+      },
+      "seed_20260908/full_ipat": {
+        "checkpoint": "9b8cdfa7aaa0854068ee5ce24e0d6c3568c136e97f61c18a6a627e9da7650fdb",
+        "run_json": "a84f69d59c5b1d70f3a774f230f26b536596a759ae861c66499f70a39d72f08c"
+      },
+      "seed_20260908/retention": {
+        "checkpoint": "b8d1d6c4c17d0654a2863e0399784dcca8bc0ac403753c2a727b6f1e3db8477b",
+        "run_json": "d9c6f9956055b38254181258a045438e5173c2a69921b84fcf2a202bad5d8e64"
+      },
+      "seed_20260909/baseline": {
+        "checkpoint": "d77a53ee2332fe313bcd571bc089c317bceff8b905524bbd6f575fc2041694f3",
+        "run_json": "2d574411d611f353ebec488d66b3d017470f6f88eba732f06b7b1871a3152cf2"
+      },
+      "seed_20260909/full_ipat": {
+        "checkpoint": "8b9e4b5d124ccc4d533f9081a4bd0be86ae2d9e576bcf8f2672646941a804b2d",
+        "run_json": "5cb3b0e5f6b8d34c053121bf4734e16b12451bbb8f738f19f4ea1a32ef3ff971"
+      },
+      "seed_20260909/retention": {
+        "checkpoint": "dd00e53a176c638346bc841afb69b01ffbf2d9b847aeade8e9e2899dd8b9884a",
+        "run_json": "5ab20abddeaa0725c88f8ae4d1c90cf045da2ce4c301d2639c45644ad529c48d"
+      },
+      "seed_20260910/baseline": {
+        "checkpoint": "35f03ad15b02f223dbabb911f346a7d9c5ee4c5be08ea6daa4f05a01610726c6",
+        "run_json": "9045971f0399f31197b28898f4b1ec84f790e8c83f439c82c1c3a5c786b15d99"
+      },
+      "seed_20260910/full_ipat": {
+        "checkpoint": "066a10af1b1530903584b72d7adff07e40e82c2f9b2b6167cfd3fcb4fbf2cdf0",
+        "run_json": "52d988070f70f960b48400b3dac15a9fe8277ef3a101a473ba3ff1abb040e40e"
+      },
+      "seed_20260910/retention": {
+        "checkpoint": "746f4e751aa85f83c448366093aa48c0fcaf8a8e9d54120e6f65b92f133b2464",
+        "run_json": "e2d8215215fe17d52184dbc51acccb36f7017ee7873fdf84a82eb11f89f0a7ab"
+      },
+      "seed_20260911/baseline": {
+        "checkpoint": "c3b79018f49ab9f0fc2cc51f965f85abf3aaf54e64ee7332a92842a31f314323",
+        "run_json": "0498f6d8a772cf58506b9254bc63c3cebac629866e6b569b7ec7e332d25fc02d"
+      },
+      "seed_20260911/full_ipat": {
+        "checkpoint": "e277ea5b935b358a57063bd286554c41e96c43f49484057deeeee367768dfe4c",
+        "run_json": "f57d782bf3cf6375c2bbf4fc33c8927f3f8b09d1c52daa6e3688e6459d1844a5"
+      },
+      "seed_20260911/retention": {
+        "checkpoint": "2f0aa4273e3aeef79e73dfbdac09fc3e109e19ba6257757357df2c8c8d9e2877",
+        "run_json": "c364b470af57fc54320db80760bf30a2ec989c3f3d5fe88756fd7e6fc52c7d91"
+      },
+      "seed_20260912/baseline": {
+        "checkpoint": "8885951ac7fe3c3f6bf640e1aa9f6c6a53885a91ff2001bd50cd28c40e784b3d",
+        "run_json": "cb933920f6d0ca4953775b2e4dc601b9101fef3608042836a22b3083e2a0b72e"
+      },
+      "seed_20260912/full_ipat": {
+        "checkpoint": "022e95880349431c306ad815d2f6759d08a8f2bf93df2dd9058394ab459b6783",
+        "run_json": "367fba50af7da4a101e7382c6338ede898be2d2f9e16deb388377e11245ea276"
+      },
+      "seed_20260912/retention": {
+        "checkpoint": "2ff03665bfd1e3051d6fe970b2f4779a041a1a7f9886d8fed43f443bd06342af",
+        "run_json": "3cc891db3804376643dd6933c99ed0ed9c8603364f5fa2140c90ac4ef0f93dd5"
+      },
+      "seed_20260913/baseline": {
+        "checkpoint": "018cf326b41291eb793fb1ad3c2dc06fb97c2bbe613235b017a885f2f5b23072",
+        "run_json": "2a5f685266ca4ef208c898406a18ed20bd5f3b5eedee2b482c6028f8076159a6"
+      },
+      "seed_20260913/full_ipat": {
+        "checkpoint": "60e8cbff186ee395126bbe47a89e64da278cff7259b746842227104f89a252f5",
+        "run_json": "82d5ca6e6da6fba09034b1073372d67871e9ab4990563bf7488386abf1e220c1"
+      },
+      "seed_20260913/retention": {
+        "checkpoint": "14339f954fa028872111396b0e80076f382f1c1be0abc75c725dd0a7b4d57356",
+        "run_json": "5fd99245682f2751ed7402389c2864b4fb9e956e545ccd3bd59cabe10ae09580"
+      },
+      "seed_20260914/baseline": {
+        "checkpoint": "ce858c179cc113313145e0c83fb8f5b75f4b5471c082aa4c4606ee0af76018f7",
+        "run_json": "9e3e55c85f4cf438f18759302da52ce5e44dd9a173442955c0ccdb29c496836b"
+      },
+      "seed_20260914/full_ipat": {
+        "checkpoint": "af721ddb24c91826a2b9bcb69c6de53fe0fb654a6d3c18901d440d04b8fc7517",
+        "run_json": "9e48969ed95ac83cbf39a453968cef2a954d2d09c06df02491858252bce6ef95"
+      },
+      "seed_20260914/retention": {
+        "checkpoint": "d8bf0a6697b4d37634ad6618e3a402939129f7bf1fdb64b6dcd815a01431622e",
+        "run_json": "9181817c1deeaaa385d4b26ff88d5797151d2dfac67cd3ed1f00b71c2d069509"
+      },
+      "seed_20260915/baseline": {
+        "checkpoint": "b371f7ccd1abfd7d31b2bd2b0e4628d6bd9318ae498eb9a10dc0895542eca704",
+        "run_json": "73aeffe6f666ceaf7634b98aea74978584833a2c13315ce464d3669bbd30f4e8"
+      },
+      "seed_20260915/full_ipat": {
+        "checkpoint": "75f1f083a51682d89c67d41d8bfd8135559ed1da83218bc3b4d3001e3f5266e2",
+        "run_json": "fc5f968ed29ce15bd9bc506f8aacdc7350a81eacaf0f1b9a36bc0ca7718d8964"
+      },
+      "seed_20260915/retention": {
+        "checkpoint": "aaf5dec26a09e16b07bfd8d3b15f52701977263659d8059128a053e8b98900f2",
+        "run_json": "98b523ee7afc0890c579de89569c38f0f19d879e7fdc32aadc0ea1192e687b55"
+      },
+      "seed_20260916/baseline": {
+        "checkpoint": "4d949b1c90ec33533b1ef9ba6d648b721331b97c6fda673e5d6d7db184283cd9",
+        "run_json": "7f1cdb4705cb119946618a31b8ceff2c50c405f255ff7dc7025b6e2a7672cd73"
+      },
+      "seed_20260916/full_ipat": {
+        "checkpoint": "a10aa67eca8036afcccca9b5ecc3b4340bc6d8239426c118a32ca89c1b18578d",
+        "run_json": "f6dd8fe2ba95e4d6d3f71a90dedd9e00dbc2ea4e90d14536fb860168753957a8"
+      },
+      "seed_20260916/retention": {
+        "checkpoint": "2f3d50efb55c6b1d63e9fcda6fcc3dc93a714b01202c59b6d175d819fcd4eb73",
+        "run_json": "15bdcc7c693182c34360644f9f5cc5e120b07aa7191b67d9284c4c8939ac6f5b"
+      },
+      "seed_20260917/baseline": {
+        "checkpoint": "76408b6ddbc63243515dcd9d6dc2d9089f9389b2427a5f01137c6c37347d099c",
+        "run_json": "4b36a23989f812a83c90db95bf2532a2f0e62a3d65ec3cdc0e3af68e057de364"
+      },
+      "seed_20260917/full_ipat": {
+        "checkpoint": "07e81aa1a2281d6dadf36703af0fdd4d1f1a058ce1bd5f1b6602bbde15d13fe4",
+        "run_json": "6f642692367c6d9e572a895971ad2d9c7cf6df8a2af49ca54537efebfddb43ee"
+      },
+      "seed_20260917/retention": {
+        "checkpoint": "94603c028aaa80be4cff21eb9d336beb649738060800160e537c0699822ec0d1",
+        "run_json": "4e472f25c5aa8b0aaa8481c916d59ce2716cb0b538ee4a49172cb30e782de553"
+      }
+    },
+    "summary": "fc0d66ec89269c741f2be16ffbe31bab2837511621a33d42d55c3290fa11a623"
+  },
+  "parent_fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "preprocessing": {
+    "delta_mean": 1.062516526676278,
+    "delta_scale": 0.3835254678157762,
+    "numeric_mean": [
+      0.0011655613416213632,
+      -0.00038024924920621793,
+      -0.007956065022409236,
+      7.704046745110721e-07,
+      -0.0005715413326009256,
+      -0.0006875766016954523
+    ],
+    "numeric_scale": [
+      1.2767497169790816,
+      1.1543718786694797,
+      4.816549736740279,
+      1.0003657109200017,
+      0.9979605401031619,
+      0.6318437671706247
+    ],
+    "timestamp_mean": 25.689009866742133,
+    "timestamp_scale": 16.227788481378536
+  },
+  "primary": "raw NLL clean-minus-corrupted; equal severity weights within equal family weights",
+  "protocol": {
+    "batch_size": 64,
+    "cpu_threads": 1,
+    "ece_bins": 15,
+    "replay_atol": 0.0,
+    "temperature_max": 100.0,
+    "temperature_min": 0.01,
+    "temperature_nll_atol": 1e-10,
+    "temperature_xatol": 1e-08
+  },
+  "seeds": [
+    20260908,
+    20260909,
+    20260910,
+    20260911,
+    20260912,
+    20260913,
+    20260914,
+    20260915,
+    20260916,
+    20260917
+  ],
+  "source_sha256": {
+    "scripts/run_exp04.py": "eb63ecced82e98fd685a5e0712b69919c5c3e01c273b4cd5a38973a82f169c8f",
+    "src/ipat/__init__.py": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+    "src/ipat/data/__init__.py": "621451a9e2396f141b38a9b2cedcff76dffb1a56d1990850e5aa9eaec43454fd",
+    "src/ipat/data/synthetic.py": "1947ba781d1b072f02654dd2b67e32587f27fc479fc49e1ae20cc8d62b48a594",
+    "src/ipat/data/torch_dataset.py": "c538f1a7c1e38829b3594277eb27dcd11c21f8a25284b2fb07c67a116527d344",
+    "src/ipat/experiments/__init__.py": "8bc3173c334d279aa5a246afa3d4611841992da6bb6a1716f338c9246312eb4f",
+    "src/ipat/experiments/exp01.py": "a98c05c78b0a9ba355180ee5b54abe9009491c9a52c8149df8d9893d03d063a4",
+    "src/ipat/experiments/exp03.py": "ca1a44298dfb4cde43e38f6bcd3cab490b4e38b99301962c0ccebadc71d0b873",
+    "src/ipat/experiments/exp03_contract.py": "6ba19b3caaddfc75ac9c948a77ce5d6c44f7a4525ec7fbc02342de23fd292a57",
+    "src/ipat/experiments/exp04.py": "453ceb476c5b78f794661c11bb5bf141980d73bff333a1542bf7e5bcb31b4f51",
+    "src/ipat/experiments/exp04_contract.py": "8eba8ebe87a69a3edc650785eefb6ae8ba0314d0925f931f7974c8559e089279",
+    "src/ipat/experiments/exp04_report.py": "2899d15e5fe98cbc1cd8844732118e0f9e3b3245f67d956abf00adc437609d9b",
+    "src/ipat/model/__init__.py": "6e9083277c1e6061f5db29301490ab93141dd7e85ba0d10968ace2016cc97bf9",
+    "src/ipat/model/adaptive.py": "0bc049903c586b92139dfff3b2618ce8f4072e69f164d1dc239e19bbb72675f5",
+    "src/ipat/model/baseline.py": "9db4972e9a666142becdddaa24e66124111965cd48d9109f5e18bc06f588d62b",
+    "src/ipat/model/retention.py": "b46fd347f43b634bddd3f9dec8342b1e680fd4f518f95cd566af1e04ff77cbb9",
+    "src/ipat/training/__init__.py": "eadb5b0b21a027c4b17095c4901d242d1d28e8a2db2e496a963930ca33a15ebd",
+    "src/ipat/training/preprocessing.py": "3ac5134b65dbe991e0ca3692880392313b76f39ac624add80852189d873189d5"
+  },
+  "version": "v0.1"
+}

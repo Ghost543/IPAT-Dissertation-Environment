@@ -1,0 +1,145 @@
+{
+  "artefact_sha256": {
+    "checkpoint.pt": "35f03ad15b02f223dbabb911f346a7d9c5ee4c5be08ea6daa4f05a01610726c6",
+    "predictions.npz": "a0fc5e087b01fbd5ff9b2dc5eb161df98d382aefb788a88e220d639531392a6d"
+  },
+  "content_sha256": "62d7c05af13cf95fea3ffb7386929664f26f5925e1820523996b15e2aafa755b",
+  "fingerprint": "fd4c3146f6f8dd893f2129d3fe5663426eb566ab9d11f8d3ecd50cf987d6286f",
+  "metrics": {
+    "diagnostics_by_position": {
+      "early": {
+        "probe_attention_mass": 0.09944240748882294,
+        "signal_attention_mass": 0.2927025258541107,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "late": {
+        "probe_attention_mass": 0.09258073568344116,
+        "signal_attention_mass": 0.2923612594604492,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      },
+      "middle": {
+        "probe_attention_mass": 0.10032165795564651,
+        "signal_attention_mass": 0.2942294776439667,
+        "uniform_probe_mass": 0.0248404610902071,
+        "uniform_signal_mass": 0.07452137768268585
+      }
+    },
+    "macro": {
+      "accuracy": 0.7156666666666666,
+      "auroc": 0.7877870068070759,
+      "brier": 0.18827423167531218,
+      "nll": 0.5547314482457412
+    },
+    "mean_logit_range": 0.1716180787794292,
+    "per_position": {
+      "early": {
+        "accuracy": 0.724,
+        "auroc": 0.7908264515716024,
+        "brier": 0.1867662963126807,
+        "nll": 0.5513583554382098
+      },
+      "late": {
+        "accuracy": 0.71,
+        "auroc": 0.7850329684399207,
+        "brier": 0.18973216235008067,
+        "nll": 0.557950273575183
+      },
+      "middle": {
+        "accuracy": 0.713,
+        "auroc": 0.787501600409705,
+        "brier": 0.18832423636317505,
+        "nll": 0.5548857157238306
+      }
+    },
+    "prediction_count": 3000,
+    "primary_probability_range": 0.03446688454937808,
+    "worst_position": {
+      "accuracy": 0.71,
+      "auroc": 0.7850329684399207,
+      "brier": 0.18973216235008067,
+      "nll": 0.557950273575183
+    }
+  },
+  "model": "baseline",
+  "seed": 20260910,
+  "status": "RUN_COMPLETE",
+  "training": {
+    "best_epoch": 6,
+    "best_val_nll": 0.5598854942321777,
+    "epoch_order_sha256": [
+      "2a7bdbb298f10df7baa97980452e49e236dc09329ea2986a6835a68063f41507",
+      "89daf03762f1b54f5674950c070369ecd8dd7e9b26ebbac4cf3f65f005d83624",
+      "01bba5467ab8732429ac46f735c86316e390472e1c326f04565f1739b35edde0",
+      "59080d2e5dc172ca8c896e41abc03d6900e71be8246972360c50ad3d72d096f8",
+      "33d8cc46171ee52f5f6a9f09473c8d809aa6d0ae1d593d176c223b88c00267ad",
+      "56a57dac24a4ca1c5e3452fbd8ca4a399f195b3f5f83138dd7cdd31ea2ec6591",
+      "2db4996869d8fee6aa5f89841afcc5d44f5ff9f6cedd9d2f5b10bb2eac5db4c6",
+      "b83c413d2c46387232d908b7d2baefce62d7631522a6d59fb98a3c40d1d51875",
+      "a3eec94d276084a5507e9331414e0230844471f2cc2d8e54e5088fb5354c59ce",
+      "d7462cd1a7c2a3998ebe040b87a7d640665286c3e4534f56b539fddd720e9fa0",
+      "f8019a79885b5682e7f1c4b8d79e36abd67fb9575455e8e684d1620245b98934"
+    ],
+    "epochs_run": 11,
+    "selected_state_sha256": "4bdb4dac1c51f91ce496f6f24d3680bc1d7c49795d80d2e1f0b3203df0043a2f",
+    "training_seconds": 168.46899999999732,
+    "trajectory": [
+      {
+        "epoch": 1,
+        "train_nll": 0.6876468505859376,
+        "val_nll": 0.664009334564209
+      },
+      {
+        "epoch": 2,
+        "train_nll": 0.6414128093719482,
+        "val_nll": 0.6310487775802612
+      },
+      {
+        "epoch": 3,
+        "train_nll": 0.6158720560073853,
+        "val_nll": 0.6146893877983093
+      },
+      {
+        "epoch": 4,
+        "train_nll": 0.5674078013896943,
+        "val_nll": 0.5676091122627258
+      },
+      {
+        "epoch": 5,
+        "train_nll": 0.5467218899726868,
+        "val_nll": 0.5625554466247559
+      },
+      {
+        "epoch": 6,
+        "train_nll": 0.5426551780700684,
+        "val_nll": 0.5598854942321777
+      },
+      {
+        "epoch": 7,
+        "train_nll": 0.5380749785900116,
+        "val_nll": 0.5620777740478515
+      },
+      {
+        "epoch": 8,
+        "train_nll": 0.5327597422599792,
+        "val_nll": 0.5648776454925537
+      },
+      {
+        "epoch": 9,
+        "train_nll": 0.5312561774253846,
+        "val_nll": 0.5673704633712768
+      },
+      {
+        "epoch": 10,
+        "train_nll": 0.5283440463542938,
+        "val_nll": 0.562879086971283
+      },
+      {
+        "epoch": 11,
+        "train_nll": 0.5235242888927459,
+        "val_nll": 0.5683476080894471
+      }
+    ]
+  }
+}
